@@ -161,6 +161,34 @@ namespace ContactDetails
         }
 
 
+        public void detele()
+        {
+            Console.WriteLine("Do you want delete the person");
+
+
+            Console.WriteLine("enter your name");
+
+
+            string personname = Console.ReadLine();
+
+
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                Contacts person = (Contacts)list[i];
+                if (person.Equals(personname))
+                {
+                    list.RemoveAt(i); // Remove the person from the list
+                    Console.WriteLine($"Person with first name '{personname}' deleted successfully.");
+                    return;
+                }
+
+                Console.WriteLine($"Person with first name '{personname}' not found.");
+            }
+
+
+        }
+
 
 
 
